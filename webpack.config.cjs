@@ -51,7 +51,12 @@ module.exports = {
     minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
   devServer: {
-    static: './dist',
+    static: [
+      {
+        directory: path.resolve(__dirname, './'),
+        publicPath: '/',
+      },
+    ],
     open: true,
     port: 8080,
   },
