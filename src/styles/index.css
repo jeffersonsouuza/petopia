@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  max-height: 100vh;
+.imagem {
+  height: 500px;
   max-width: 100%;
-  background-image: url('/src/assets/img/petopia-lp.png');
+  background-image: url('../assets/img/petopia-lp.png');
 }

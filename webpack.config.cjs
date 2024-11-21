@@ -15,6 +15,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
@@ -26,7 +30,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        test: /\.(png|jpe?g|gif|svg|webp|ico|webmanifest)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/img/[name].[contenthash][ext]',
@@ -40,6 +44,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      inject: 'body',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -51,12 +56,7 @@ module.exports = {
     minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
   devServer: {
-    static: [
-      {
-        directory: path.resolve(__dirname, './'),
-        publicPath: '/',
-      },
-    ],
+    static: path.join(__dirname, 'dist'),
     open: true,
     port: 8080,
   },
