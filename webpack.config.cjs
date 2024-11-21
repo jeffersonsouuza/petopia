@@ -1,7 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -26,6 +25,13 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/img/[name].[contenthash][ext]',
+        },
+      },
     ],
   },
   plugins: [
@@ -38,14 +44,6 @@ module.exports = {
         collapseWhitespace: true,
         removeComments: true,
       },
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: './src/assets/img',
-          to: 'assets/img',
-        },
-      ],
     }),
   ],
   optimization: {
