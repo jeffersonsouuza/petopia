@@ -33,7 +33,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg|webp|ico|webmanifest)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/img/[name].[contenthash][ext]',
+          filename: 'assets/img/[name][ext]',
         },
       },
     ],
