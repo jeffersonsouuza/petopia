@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{html,js}', './src/index.html'],
   theme: {
     extend: {
+      fontFamily: {
+        neueMontreal: ['Neue Montreal', 'sans-serif'],
+      },
       colors: {
         'white-100': '#FFFFFF',
         'white-200': '#F5F5F5',
