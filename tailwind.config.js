@@ -6,6 +6,64 @@ module.exports = {
       fontFamily: {
         neueMontreal: ['Neue Montreal', 'sans-serif'],
       },
+      fontSize: {
+        sm: [
+          '0.875rem',
+          {
+            lineHeight: '1.575rem',
+            letterSpacing: '-0.01em',
+            fontWeight: '500',
+          },
+        ],
+        base: [
+          '1rem',
+          {
+            lineHeight: '2.25rem',
+            letterSpacing: '-0.02em',
+            fontWeight: '700',
+          },
+        ],
+        xl: [
+          '1.125rem',
+          {
+            lineHeight: '2.03rem',
+            letterSpacing: '-0.01em',
+            fontWeight: '500',
+          },
+        ],
+        '2xl': [
+          '1rem',
+          {
+            lineHeight: '2.25rem',
+            letterSpacing: '-0.02em',
+            fontWeight: '700',
+          },
+        ],
+        '3xl': [
+          '2rem',
+          {
+            lineHeight: '3rem',
+            letterSpacing: '-0.01em',
+            fontWeight: '500',
+          },
+        ],
+        '4xl': [
+          '1rem',
+          {
+            lineHeight: '2.25rem',
+            letterSpacing: '-0.02em',
+            fontWeight: '700',
+          },
+        ],
+        '5xl': [
+          '3.75rem',
+          {
+            lineHeight: '5.62rem',
+            letterSpacing: '-0.01em',
+            fontWeight: '500',
+          },
+        ],
+      },
       colors: {
         'white-100': '#FFFFFF',
         'white-200': '#F5F5F5',
@@ -15,6 +73,24 @@ module.exports = {
         'green-100': '#1C4A2A',
         'green-200': '#0E2515',
       },
+      container: {
+        // center: true,
+        padding: {
+          DEFAULT: '1.25rem',
+          // sm: '2rem',
+          // md: '3rem',
+          lg: '3.75rem',
+          // xl: '5rem',
+        },
+      },
+      // screens: {
+      //   'xs': '480px',
+      //   sm: '640px',
+      //   md: '768px',
+      //   lg: '1024px',
+      //   xl: '1320px',
+      //   '2xl': '1440px',
+      // },
       padding: {
         16: '1rem',
         20: '1.25rem',
@@ -33,6 +109,12 @@ module.exports = {
         24: '1.5rem',
         40: '2.5rem',
         48: '3rem',
+      },
+      objectPosition: {
+        'hero-img-md': '36% 50%',
+        'hero-img-lg': '40% 50%',
+        'hero-img-xl': '30% 50%',
+        'hero-img-2xl': '20% 50%',
       },
     },
   },

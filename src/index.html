@@ -39,27 +39,29 @@
 
 <body class="font-neueMontreal">
   <header>
-    <div class="container mx-auto">
-      <nav class="flex justify-between bg-white py-16 px-20">
-        <img class="" src="assets/img/petopia-logo.png" alt="logo petopia">
+    <nav class="bg-white py-16 w-full">
+      <div class="container flex justify-between">
+        <img class="" src="assets/img/petopia-logo.svg" alt="logo petopia">
         <div class="flex items-center space-x-6">
           <img src="assets/img/icons/search.svg" alt="search icon">
           <img src="assets/img/icons/menu-hamburguer.svg" alt="menu hamburguer icon">
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <div>
-        <div class="flex flex-col gap-16 bg-green-100 px-20 py-48">
-          <h1>Embrace Endless Love with Your New Furry Best Friend.</h1>
-          <p>Embrace endless love with your new furry best friend. <br> Adopt now and start creating unforgettable memories together.
+    <div class="bg-green-100 md:grid md:grid-cols-2 ">
+      <div class="container">
+        <div class="flex flex-col gap-16 py-48 md:pt-[162px] md:pb-[366px]">
+          <h1 class="text-white-100 text-3xl xl:text-5xl">Embrace Endless Love with Your New Furry Best Friend.</h1>
+          <p class="text-white-300 text-sm lg:text-xl">Embrace endless love with your new furry best friend. <br> Adopt now and start creating unforgettable memories together.
           </p>
         </div>
-        <picture>
-          <source srcset="assets/img/webp/hero-img.webp" type="image/webp">
-          <source srcset="assets/img/hero-img.jpg" type="image/jpeg">
-          <img src="assets/img/hero-img.jpg" alt="Logo Petopia">
-        </picture>
       </div>
+      <picture class="block w-full h-full">
+        <source srcset="assets/img/webp/hero-img.webp" type="image/webp">
+        <source srcset="assets/img/hero-img.jpg" type="image/jpeg">
+        <img src="assets/img/hero-img.jpg" class="w-full h-full object-cover md:object-hero-img-md lg:object-hero-img-lg  xl:object-hero-img-xl  2xl:object-hero-img-2xl" alt="lady with dog on her lap">
+      </picture>
     </div>
   </header>
 </body>
